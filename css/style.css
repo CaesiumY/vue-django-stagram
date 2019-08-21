@@ -34,9 +34,14 @@ nav {
     flex-grow: 1;
 }
 
-.post .post-contents {
-    height: 425px;
+.post-contents {
+    width: 100%;
+    height: auto;
     background-color: bisque;
+}
+
+.post-contentsImg {
+    width: 100%;
 }
 
 .post .post-info {
