@@ -1,0 +1,24 @@
+nav {
+    background-color: #eee;
+    border-bottom: 1px solid black;
+}
+
+.post .post-head {
+    height: 60px;
+    background-color: aquamarine;
+}
+
+.post .post-contents {
+    height: 425px;
+    background-color: bisque;
+}
+
+.post .post-info {
+    height: 40px;
+    background-color: aqua;
+}
+
+.post .post-comments {
+    height: 100px;
+    background-color: bisque;
+}
