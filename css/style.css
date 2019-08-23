@@ -7,6 +7,7 @@ html {
 nav {
     background-color: #eee;
     border-bottom: 1px solid black;
+    height: 50px;
 }
 
 .post-head {
@@ -44,9 +45,32 @@ nav {
     width: 100%;
 }
 
-.post .post-info {
+.post-info {
     height: 40px;
-    background-color: aqua;
+}
+
+.post-info-container {
+    display: flex;
+    position: relative;
+    padding-left: 2%;
+    padding-right: 2%;
+}
+
+.post-info-pages {
+    flex-grow: 1;
+}
+
+.infoBtn {
+    width: 38px;
+    height: 38px;
+    font-size: 24px;
+    text-align: center;
+    line-height: 36px !important;
+    color: #2d3436;
+}
+
+.fa-heart {
+    color: red;
 }
 
 .post .post-comments {
