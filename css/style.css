@@ -11,7 +11,7 @@ nav {
 
 .post-head {
     height: 60px;
-    background-color: aquamarine;
+    background-color: #fafafa;
 }
 .post-head-container {
     display: flex;
@@ -32,12 +32,12 @@ nav {
 .post-head-name {
     padding-left: 15px;
     flex-grow: 1;
+    line-height: 26px;
 }
 
 .post-contents {
     width: 100%;
     height: auto;
-    background-color: bisque;
 }
 
 .post-contentsImg {
