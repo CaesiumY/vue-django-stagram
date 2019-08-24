@@ -47,6 +47,7 @@ nav {
 
 .post-info {
     height: 40px;
+    background-color: #fafafa;
 }
 
 .post-info-container {
@@ -73,7 +74,26 @@ nav {
     color: red;
 }
 
-.post .post-comments {
+.post-comments {
     height: 100px;
     background-color: bisque;
+    padding: 0 10px;
+    font-size: 1rem;
+}
+
+.post-comments-like {
+    display: flex;
+    position: relative;
+    align-items: center;
+    justify-items: flex-end;
+}
+
+.post-comments-likeImg {
+    padding-top: 5px;
+    width: 25px;
+    border-radius: 50%;
+}
+
+.post-comments-likeNumber {
+    padding-left: 10px;
 }
