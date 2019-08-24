@@ -12,6 +12,8 @@ nav {
     height: 50px;
 }
 
+/* 헤더 */
+
 .post-head {
     height: 60px;
     background-color: #fafafa;
@@ -38,6 +40,8 @@ nav {
     line-height: 30px;
 }
 
+/* 컨텐츠 */
+
 .post-contents {
     width: 100%;
     height: auto;
@@ -46,6 +50,8 @@ nav {
 .post-contentsImg {
     width: 100%;
 }
+
+/* 인포 */
 
 .post-info {
     height: 40px;
@@ -76,9 +82,12 @@ nav {
     color: red;
 }
 
+/* 코멘트 */
+
 .post-comments {
     padding: 0 10px;
     font-size: 0.93rem;
+    background-color: #fafafa;
 }
 
 .post-comments-like {
