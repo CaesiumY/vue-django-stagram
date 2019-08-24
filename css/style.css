@@ -1,11 +1,13 @@
+@import url("https://fonts.googleapis.com/css?family=Roboto&display=swap");
+
 body,
 html {
     margin: 0;
     padding: 0;
+    font-family: "Roboto", sans-serif;
 }
 
 nav {
-    background-color: #eee;
     border-bottom: 1px solid black;
     height: 50px;
 }
@@ -33,7 +35,7 @@ nav {
 .post-head-name {
     padding-left: 15px;
     flex-grow: 1;
-    line-height: 26px;
+    line-height: 30px;
 }
 
 .post-contents {
@@ -70,15 +72,13 @@ nav {
     color: #2d3436;
 }
 
-.fa-heart {
+.fa-heart.infoBtn {
     color: red;
 }
 
 .post-comments {
-    height: 100px;
-    background-color: bisque;
     padding: 0 10px;
-    font-size: 1rem;
+    font-size: 0.93rem;
 }
 
 .post-comments-like {
@@ -96,4 +96,32 @@ nav {
 
 .post-comments-likeNumber {
     padding-left: 10px;
+}
+
+.post-comments-list {
+    padding-top: 5px;
+}
+
+.post-comments-item {
+    position: relative;
+}
+
+.post-comments-itemName {
+    font-weight: 900;
+}
+
+.post-comments-itemLike {
+    position: absolute;
+    right: 0;
+}
+
+.commentsBtn {
+    font-size: 0.9rem;
+    color: #636e72;
+}
+
+.post-comments-date {
+    padding-top: 5px;
+    color: #999;
+    font-size: 0.8rem;
 }
