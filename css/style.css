@@ -6,10 +6,44 @@ html {
     padding: 0;
     font-family: "Roboto", sans-serif;
 }
-
+/* 네비 */
 nav {
     border-bottom: 1px solid black;
-    height: 50px;
+    padding: 25px 20px 15px 20px;
+}
+
+.nav-container {
+    display: flex;
+    position: relative;
+    max-width: 1000px;
+    margin: auto;
+}
+
+.nav-logo {
+    display: flex;
+}
+
+.navBtn {
+    font-size: 1.6rem;
+}
+
+.nav-logoImg {
+    height: 35px;
+}
+
+.line {
+    background-color: #262626;
+    width: 1px;
+    height: 28px;
+    margin: 0px 16px;
+}
+
+.nav-group-container {
+    width: 132px;
+    display: flex;
+    justify-content: space-around;
+    position: absolute;
+    right: 0px;
 }
 
 /* 헤더 */
