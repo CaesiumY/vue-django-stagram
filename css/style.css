@@ -46,6 +46,13 @@ nav {
     right: 0px;
 }
 
+/* 포스트 */
+.post {
+    margin: auto;
+    max-width: 600px;
+    /* border: 1px solid black; */
+}
+
 /* 헤더 */
 
 .post-head {
@@ -164,7 +171,7 @@ nav {
 }
 
 .post-comments-date {
-    padding-top: 5px;
+    padding: 5px 0px;
     color: #999;
     font-size: 0.8rem;
 }
