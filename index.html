@@ -12,88 +12,112 @@
 </head>
 
 <body>
-    <nav class="nav">
-        <div class="nav-container">
-            <span class="nav-logo">
-                <i class="fab fa-instagram navBtn"></i>
-                <span class="line"></span>
-                <img src="https://raw.githubusercontent.com/lebmouse/frontSession_material/draft/image/logo_font.png"
-                    alt="" class="nav-logoImg">
-            </span>
-            <span class="nav-group">
-                <span class="nav-group-container">
-                    <span class="nav-explorer">
-                        <i class="far fa-compass navBtn"></i>
-                    </span>
-                    <span class="nav-like">
-                        <i class="far fa-heart navBtn"></i>
-                    </span>
-                    <span class="nav-profile">
-                        <i class="far fa-user navBtn"></i>
+    <div id="app">
+        <nav class="nav">
+            <div class="nav-container">
+                <span class="nav-logo">
+                    <i class="fab fa-instagram navBtn"></i>
+                    <span class="line"></span>
+                    <img src="https://raw.githubusercontent.com/lebmouse/frontSession_material/draft/image/logo_font.png"
+                        alt="" class="nav-logoImg">
+                </span>
+                <span class="nav-group">
+                    <span class="nav-group-container">
+                        <span class="nav-explorer">
+                            <i class="far fa-compass navBtn"></i>
+                        </span>
+                        <span class="nav-like">
+                            <i class="far fa-heart navBtn"></i>
+                        </span>
+                        <span class="nav-profile">
+                            <i class="far fa-user navBtn"></i>
+                        </span>
                     </span>
                 </span>
-            </span>
-        </div>
-    </nav>
-    <main>
-        <div class="post">
-            <div class="post-head">
-                <div class="post-head-container">
-                    <div class="post-head-profile">
-                        <img src="img/profile1.png" alt="profile" class="post-head-profileImg">
+            </div>
+        </nav>
+        <main>
+            <div class="post">
+                <div class="post-head">
+                    <div class="post-head-container">
+                        <div class="post-head-profile">
+                            <img src="img/profile1.png" alt="profile" class="post-head-profileImg">
+                        </div>
+                        <div class="post-head-name"><b>pigeon</b></div>
+                        <div class="post-head-btn">...</div>
                     </div>
-                    <div class="post-head-name"><b>pigeon</b></div>
-                    <div class="post-head-btn">...</div>
-                </div>
 
-            </div>
-            <div class="post-contents">
-                <div class="post-contents-container">
-                    <img src="img/content1.jpg" alt="" class="post-contentsImg">
                 </div>
-            </div>
-            <div class="post-info">
-                <div class="post-info-container">
-                    <i class="far fa-heart infoBtn"></i>
-                    <i class="far fa-comment infoBtn"></i>
-                    <i class="fas fa-external-link-alt infoBtn"></i>
-                    <span class="post-info-pages"></span>
-                    <i class="far fa-bookmark infoBtn"></i>
-                </div>
-            </div>
-            <div class="post-comments">
-                <div class="post-comments-like">
-                    <span class="post-comments-likeProfile">
-                        <img src="img/profile2.jpg" alt="" class="post-comments-likeImg">
-                    </span>
-                    <span class="post-comments-likeNumber">
-                        <b>떼껄룩</b> 님 <b>외 2명</b>이 좋아합니다.
-                    </span>
-                </div>
-                <div class="post-comments-list">
-                    <div class="post-comments-item">
-                        <span class="post-comments-itemName">
-                            카짓
-                        </span>
-                        <span class="post-comments-itemContent">이것 좀 보고 가</span>
-                        <span class="post-comments-itemLike">
-                            <i class="far fa-heart commentsBtn"></i>
-                        </span>
-                    </div>
-                    <div class="post-comments-item">
-                        <span class="post-comments-itemName">
-                            포로리
-                        </span>
-                        <span class="post-comments-itemContent">나 때릴꺼야?</span>
-                        <span class="post-comments-itemLike">
-                            <i class="far fa-heart commentsBtn"></i>
-                        </span>
+                <div class="post-contents">
+                    <div class="post-contents-container">
+                        <img src="img/content1.jpg" alt="" class="post-contentsImg">
                     </div>
                 </div>
-                <div class="post-comments-date">2일 전</div>
+                <div class="post-info">
+                    <div class="post-info-container">
+                        <i class="far fa-heart infoBtn"></i>
+                        <i class="far fa-comment infoBtn"></i>
+                        <i class="fas fa-external-link-alt infoBtn"></i>
+                        <span class="post-info-pages"></span>
+                        <i class="far fa-bookmark infoBtn"></i>
+                    </div>
+                </div>
+                <div class="post-comments">
+                    <div class="post-comments-like">
+                        <span class="post-comments-likeProfile">
+                            <img src="img/profile2.jpg" alt="" class="post-comments-likeImg">
+                        </span>
+                        <span class="post-comments-likeNumber">
+                            <b>떼껄룩</b> 님 <b>외 2명</b>이 좋아합니다.
+                        </span>
+                    </div>
+                    <div class="post-comments-list">
+                        <div class="post-comments-item">
+                            <span class="post-comments-itemName">
+                                카짓
+                            </span>
+                            <span class="post-comments-itemContent">이것 좀 보고 가</span>
+                            <span class="post-comments-itemLike">
+                                <i class="far fa-heart commentsBtn"></i>
+                            </span>
+                        </div>
+                        <div class="post-comments-item">
+                            <span class="post-comments-itemName">
+                                포로리
+                            </span>
+                            <span class="post-comments-itemContent">나 때릴꺼야?</span>
+                            <span class="post-comments-itemLike">
+                                <i class="far fa-heart commentsBtn"></i>
+                            </span>
+                        </div>
+                        <div class="post-comments-item">
+                            <span class="post-comments-itemName">
+                                {{user_id}}
+                            </span>
+                            <span class="post-comments-itemContent">{{message}}</span>
+                            <span class="post-comments-itemLike">
+                                <i class="far fa-heart commentsBtn"></i>
+                            </span>
+                        </div>
+                    </div>
+                    <div class="post-comments-date">2일 전</div>
+                </div>
             </div>
-        </div>
-    </main>
+        </main>
+    </div>
+
+    <script src="https://unpkg.com/vue@2.6.10/dist/vue.js"></script>
+    <script>
+        var vue = new Vue({
+            el: '#app',
+            data() {
+                return {
+                    user_id: 'KYH',
+                    message: 'hello world!'
+                }
+            },
+        })
+    </script>
 </body>
 
 </html>
