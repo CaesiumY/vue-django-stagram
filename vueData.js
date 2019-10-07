@@ -26,6 +26,7 @@ var navigation = {
 };
 
 var postHead = {
+    props: ["post"],
     template: `
     <div class="post-head">
         <div class="post-head-container">
@@ -40,6 +41,7 @@ var postHead = {
 };
 
 var postContents = {
+    props: ["post"],
     template: `
 <div class="post-contents">
     <div class="post-contents-container" v-for="content in post.contents">
@@ -49,6 +51,7 @@ var postContents = {
 };
 
 var postInfo = {
+    props: ["post"],
     template: `
 <div class="post-info">
     <div class="post-info-container">
@@ -62,6 +65,7 @@ var postInfo = {
 };
 
 var postComments = {
+    props: ["post"],
     template: `
 <div class="post-comments">
     <div class="post-comments-like">

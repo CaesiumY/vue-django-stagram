@@ -16,10 +16,10 @@
         <navigation></navigation>
         <main>
             <div class="post">
-                <post-head></post-head>
-                <post-contents></post-contents>
-                <post-info></post-info>
-                <post-comments></post-comments>
+                <post-head :post="post"></post-head>
+                <post-contents :post="post"></post-contents>
+                <post-info :post="post"></post-info>
+                <post-comments :post="post"></post-comments>
             </div>
         </main>
     </div>
