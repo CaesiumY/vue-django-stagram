@@ -7,7 +7,7 @@
     </section>
     <section>
       <ol>
-        <li v-for="(item, index) in list" :key="index">{{item}}</li>
+        <li v-for="(item, index) in list" :key="index">{{item}} 은 {{index + 1}}번째</li>
       </ol>
     </section>
   </div>
