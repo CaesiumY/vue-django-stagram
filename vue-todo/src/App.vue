@@ -1,19 +1,22 @@
 <template>
   <div id="app">
-    <!-- <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>-->
-    hello world!!
+    <header>Todo List</header>
+    <section class="input">
+      <input type="text" name id />
+      <input type="button" value="제출" />
+    </section>
+    <section>
+      <ol>
+        <li>리스트</li>
+      </ol>
+    </section>
   </div>
 </template>
 
 <script>
-import HelloWorld from "./components/HelloWorld.vue";
-
 export default {
   name: "app",
-  components: {
-    HelloWorld
-  }
+  components: {}
 };
 </script>
 
