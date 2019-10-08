@@ -2,12 +2,12 @@
   <div id="app">
     <header>Todo List</header>
     <section class="input">
-      <input type="text" name id />
-      <input type="button" value="제출" />
+      <input type="text" name id="todoInput" v-model="value" @keyup.enter="addItem" />
+      <input type="button" @click="addItem" value="제출" />
     </section>
     <section>
       <ol>
-        <li>리스트</li>
+        <li v-for="(item, index) in list" :key="index">{{item}}</li>
       </ol>
     </section>
   </div>
@@ -16,6 +16,18 @@
 <script>
 export default {
   name: "app",
+  data() {
+    return {
+      value: "",
+      list: []
+    };
+  },
+  methods: {
+    addItem() {
+      this.list.push(this.value);
+      this.value = "";
+    }
+  },
   components: {}
 };
 </script>
