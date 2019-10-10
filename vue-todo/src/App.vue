@@ -8,7 +8,8 @@
     <section>
       <ol>
         <li v-for="(item, index) in list" :key="index">
-          {{item}} 은 {{index + 1}}번째
+          <input class="item" type="text" readonly :value="item" ref="item" />
+          <button ref="modifyBtn" @click="modifyItem(index)">수정</button>
           <button @click="removeItem(index)">삭제</button>
         </li>
       </ol>
@@ -35,7 +36,10 @@ export default {
   data() {
     return {
       value: "",
-      list: storage.fetch()
+      list: storage.fetch(),
+      valueModify: "",
+      beforeModify: null,
+      nowModify: null
     };
   },
   watch: {
@@ -53,6 +57,32 @@ export default {
     },
     removeItem(index) {
       this.list.splice(index, 1);
+    },
+    modifyItem(index) {
+      let pre = this.beforeModify;
+      if (pre != null) {
+        let item = this.$refs["item"][pre];
+        let modifyBtn = this.$refs["modifyBtn"][pre];
+        item.setAttribute("readonly", "readonly");
+        modifyBtn.innerText = "수정";
+      }
+
+      if (this.beforeModify === index) {
+        let item = this.$refs["item"][index];
+        let modifyBtn = this.$refs["modifyBtn"][index];
+        item.setAttribute("readonly", "readonly");
+        modifyBtn.innerText = "수정";
+        this.list.splice(index, 1, item.value);
+        console.log("수정완료");
+        this.beforeModify = null;
+      } else {
+        let item = this.$refs["item"][index];
+        let modifyBtn = this.$refs["modifyBtn"][index];
+        item.removeAttribute("readonly", "readonly");
+        modifyBtn.innerText = "완료";
+        this.nowModify = index;
+        this.beforeModify = index;
+      }
     }
   },
   components: {}
