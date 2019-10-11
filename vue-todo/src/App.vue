@@ -100,6 +100,7 @@ export default {
         let item = this.$refs["item"][index];
         let modifyBtn = this.$refs["modifyBtn"][index];
         item.setAttribute("readonly", "readonly");
+        item.classList.remove("form-control");
         modifyBtn.innerText = "수정";
         this.list.splice(index, 1, item.value);
         this.beforeModify = null;
@@ -107,6 +108,7 @@ export default {
         let item = this.$refs["item"][index];
         let modifyBtn = this.$refs["modifyBtn"][index];
         item.removeAttribute("readonly", "readonly");
+        item.classList.add("form-control");
         modifyBtn.innerText = "완료";
         this.nowModify = index;
         this.beforeModify = index;
