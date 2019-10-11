@@ -59,13 +59,13 @@ export default {
       this.list.splice(index, 1);
     },
     modifyItem(index) {
-      let pre = this.beforeModify;
-      if (pre != null) {
-        let item = this.$refs["item"][pre];
-        let modifyBtn = this.$refs["modifyBtn"][pre];
-        item.setAttribute("readonly", "readonly");
-        modifyBtn.innerText = "수정";
-      }
+      // let pre = this.beforeModify;
+      // if (pre != null) {
+      //   let item = this.$refs["item"][pre];
+      //   let modifyBtn = this.$refs["modifyBtn"][pre];
+      //   item.setAttribute("readonly", "readonly");
+      //   modifyBtn.innerText = "수정";
+      // }
 
       if (this.beforeModify === index) {
         let item = this.$refs["item"][index];
@@ -73,7 +73,6 @@ export default {
         item.setAttribute("readonly", "readonly");
         modifyBtn.innerText = "수정";
         this.list.splice(index, 1, item.value);
-        console.log("수정완료");
         this.beforeModify = null;
       } else {
         let item = this.$refs["item"][index];
