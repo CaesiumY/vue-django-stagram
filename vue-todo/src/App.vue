@@ -1,19 +1,35 @@
 <template>
   <div id="app">
-    <header>Todo List</header>
-    <section class="input">
-      <input type="text" name id="todoInput" v-model="value" @keyup.enter="addItem" />
-      <input type="button" @click="addItem" value="제출" />
-    </section>
-    <section>
-      <ol>
-        <li v-for="(item, index) in list" :key="index">
-          <input class="item" type="text" readonly :value="item" ref="item" />
-          <button ref="modifyBtn" @click="modifyItem(index)">수정</button>
-          <button @click="removeItem(index)">삭제</button>
-        </li>
-      </ol>
-    </section>
+    <div class="container">
+      <h2>Todo List</h2>
+      <div class="input-group mb-3">
+        <input
+          class="form-control"
+          type="text"
+          id="todoInput"
+          v-model="value"
+          @keyup.enter="addItem"
+          placeholder="할 일을 입력하세요"
+        />
+        <div class="input-group-append">
+          <button class="btn btn-outline-secondary" type="button" @click="addItem">제출</button>
+        </div>
+      </div>
+
+      <section>
+        <ul class="list-group">
+          <li
+            class="list-group-item d-flex justify-content-between align-items-center"
+            v-for="(item, index) in list"
+            :key="index"
+          >
+            <input class="item mr-3" type="text" readonly :value="item" ref="item" />
+            <button class ref="modifyBtn" @click="modifyItem(index)">수정</button>
+            <button @click="removeItem(index)">삭제</button>
+          </li>
+        </ul>
+      </section>
+    </div>
   </div>
 </template>
 
@@ -89,12 +105,15 @@ export default {
 </script>
 
 <style>
-#app {
-  font-family: "Avenir", Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
+input {
+  border: none;
+  font-size: 1.2rem;
+}
+.item {
+  flex-grow: 1;
+}
+
+.item:focus {
+  outline: none;
 }
 </style>
