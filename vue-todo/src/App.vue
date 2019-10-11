@@ -23,7 +23,7 @@
             v-for="(item, index) in list"
             :key="index"
           >
-            <input class="item mr-3" type="text" readonly :value="item" ref="item" />
+            <input class="item mr-3" type="text" readonly :value="item" ref="item" @dblclick="modifyItem(index)" @keyup.enter="modifyItem(index)" />
             <div class>
               <button
                 class="btn btn-link dropdown-toggle"
