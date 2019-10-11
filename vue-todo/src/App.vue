@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-    <div class="container">
+    <div class="container mt-3">
       <h2>Todo List</h2>
       <div class="input-group mb-3">
         <input
@@ -24,8 +24,21 @@
             :key="index"
           >
             <input class="item mr-3" type="text" readonly :value="item" ref="item" />
-            <button class ref="modifyBtn" @click="modifyItem(index)">수정</button>
-            <button @click="removeItem(index)">삭제</button>
+            <div class>
+              <button
+                class="btn btn-link dropdown-toggle"
+                data-toggle="dropdown"
+                aria-haspopup="true"
+                aria-expanded="false"
+              >
+                더보기
+                <span class="caret"></span>
+              </button>
+              <div class="dropdown-menu">
+                <button class="dropdown-item" ref="modifyBtn" @click="modifyItem(index)">수정</button>
+                <button class="dropdown-item" @click="removeItem(index)">삭제</button>
+              </div>
+            </div>
           </li>
         </ul>
       </section>
