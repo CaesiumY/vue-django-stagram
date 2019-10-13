@@ -1,63 +1,18 @@
 <template>
   <div id="app">
     <div class="container mt-3">
-      <header>
-        <h2>Todo List</h2>
-        <span>{{list.length}}개의 할 일이 있습니다.</span>
-      </header>
-      <div class="input-group mb-3 mt-3">
-        <input
-          class="form-control"
-          type="text"
-          id="todoInput"
-          v-model="value"
-          @keyup.enter="addItem"
-          placeholder="할 일을 입력하세요"
-        />
-        <div class="input-group-append">
-          <button class="btn btn-outline-secondary" type="button" @click="addItem">제출</button>
-        </div>
-      </div>
-
-      <section>
-        <ul class="list-group">
-          <li
-            class="list-group-item d-flex justify-content-between align-items-center"
-            v-for="(item, index) in list"
-            :key="index"
-          >
-            <input
-              class="item"
-              type="text"
-              readonly
-              :value="item"
-              ref="item"
-              @dblclick="modifyItem(index)"
-              @keyup.enter="modifyItem(index)"
-            />
-            <div class>
-              <button
-                class="btn btn-link dropdown-toggle"
-                data-toggle="dropdown"
-                aria-haspopup="true"
-                aria-expanded="false"
-              >
-                더보기
-                <span class="caret"></span>
-              </button>
-              <div class="dropdown-menu">
-                <button class="dropdown-item" ref="modifyBtn" @click="modifyItem(index)">수정</button>
-                <button class="dropdown-item" @click="removeItem(index)">삭제</button>
-              </div>
-            </div>
-          </li>
-        </ul>
-      </section>
+      <Header></Header>
+      <Input></Input>
+      <List></List>
     </div>
   </div>
 </template>
 
 <script>
+import Header from "./components/header";
+import InputBar from "./components/inputBar";
+import List from "./components/list";
+
 const STORAGE_KEY = "todoList";
 
 var storage = {
@@ -126,7 +81,11 @@ export default {
       }
     }
   },
-  components: {}
+  components: {
+    Header,
+    InputBar,
+    List
+  }
 };
 </script>
 
