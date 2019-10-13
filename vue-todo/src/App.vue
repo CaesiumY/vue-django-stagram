@@ -1,8 +1,11 @@
 <template>
   <div id="app">
     <div class="container mt-3">
-      <h2>Todo List</h2>
-      <div class="input-group mb-3">
+      <header>
+        <h2>Todo List</h2>
+        <span>{{list.length}}개의 할 일이 있습니다.</span>
+      </header>
+      <div class="input-group mb-3 mt-3">
         <input
           class="form-control"
           type="text"
@@ -23,7 +26,15 @@
             v-for="(item, index) in list"
             :key="index"
           >
-            <input class="item mr-3" type="text" readonly :value="item" ref="item" @dblclick="modifyItem(index)" @keyup.enter="modifyItem(index)" />
+            <input
+              class="item"
+              type="text"
+              readonly
+              :value="item"
+              ref="item"
+              @dblclick="modifyItem(index)"
+              @keyup.enter="modifyItem(index)"
+            />
             <div class>
               <button
                 class="btn btn-link dropdown-toggle"
