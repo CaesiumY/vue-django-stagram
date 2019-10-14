@@ -2,7 +2,7 @@
   <div id="app">
     <div class="container mt-3">
       <Header></Header>
-      <Input></Input>
+      <InputBar></InputBar>
       <List></List>
     </div>
   </div>
