@@ -51,7 +51,7 @@ export default {
   },
   methods: {
     removeItem(index) {
-      this.$store.commit("spliceItem", index);
+      this.$store.commit("removeList", index);
     }
   }
 };
