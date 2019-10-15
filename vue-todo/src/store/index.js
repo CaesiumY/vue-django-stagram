@@ -5,7 +5,10 @@ Vue.use(Vuex);
 
 export default new Vuex.Store({
     state: {
-        list: []
+        list: [],
+        modifyItem: "",
+        preItem: null,
+        nowItem: null
     },
     getters: {
         getList(state) {
@@ -27,6 +30,19 @@ export default new Vuex.Store({
         },
         removeList(state, payload) {
             state.list.splice(payload, 1);
+        },
+        modifyList(state, payload) {
+            if (state.preItem === payload.index) {
+                payload.item.setAttribute("readonly", "readonly");
+                payload.modifyBtn.innerText = "수정";
+                state.list.splice(payload.index, 1, payload.item.value);
+                state.preItem = null;
+            } else {
+                payload.item.removeAttribute("readonly");
+                payload.modifyBtn.innerText = "완료";
+                state.preItem = payload.index;
+                state.nowItem = payload.index;
+            }
         }
     }
 });

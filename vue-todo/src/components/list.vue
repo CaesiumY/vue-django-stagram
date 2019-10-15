@@ -39,9 +39,8 @@
 export default {
   data() {
     return {
-      valueToModify: "",
-      prevModifyItem: null,
-      nowModifyItem: null
+      // item: this.$refs["item"][index],
+      // modifyBtn: this.$refs["modifyBtn"][index]
     };
   },
   computed: {
@@ -52,6 +51,13 @@ export default {
   methods: {
     removeItem(index) {
       this.$store.commit("removeList", index);
+    },
+    modifyItem(index) {
+      this.$store.commit("modifyList", {
+        index,
+        item: this.$refs["item"][index],
+        modifyBtn: this.$refs["modifyBtn"][index]
+      });
     }
   }
 };
