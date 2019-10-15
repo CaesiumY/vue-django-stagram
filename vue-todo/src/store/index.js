@@ -35,10 +35,13 @@ export default new Vuex.Store({
             if (state.preItem === payload.index) {
                 payload.item.setAttribute("readonly", "readonly");
                 payload.modifyBtn.innerText = "수정";
+                payload.item.classList.add("no-outline");
                 state.list.splice(payload.index, 1, payload.item.value);
                 state.preItem = null;
             } else {
                 payload.item.removeAttribute("readonly");
+                payload.item.classList.remove("no-outline");
+                payload.item.focus();
                 payload.modifyBtn.innerText = "완료";
                 state.preItem = payload.index;
                 state.nowItem = payload.index;

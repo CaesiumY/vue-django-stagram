@@ -7,7 +7,7 @@
         :key="index"
       >
         <input
-          class="item"
+          class="item no-outline"
           type="text"
           readonly
           :value="item"

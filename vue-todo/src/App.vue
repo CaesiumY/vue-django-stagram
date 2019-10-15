@@ -44,7 +44,7 @@ input {
   flex-grow: 1;
 }
 
-.item:focus {
+.no-outline:focus {
   outline: none;
 }
 </style>
