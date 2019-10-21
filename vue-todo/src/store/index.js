@@ -1,5 +1,6 @@
 import Vue from "vue";
 import Vuex from "vuex";
+import axios from "axios";
 
 Vue.use(Vuex);
 
@@ -17,7 +18,16 @@ export default new Vuex.Store({
     },
     actions: {
         asyncSetList({ commit }) {
-            let lsList = JSON.parse(localStorage.getItem("todoList") || "[]");
+            // let lsList = JSON.parse(localStorage.getItem("todoList") || "[]");
+            let lsList = axios
+                .get("http://127.0.0.1:8000/api/todos")
+                .then(response => {
+                    console.log(response);
+                    commit("setList", response.data);
+                })
+                .catch(error => {
+                    console.log(error);
+                });
             commit("setList", lsList);
         }
     },
