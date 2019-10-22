@@ -10,7 +10,7 @@
           class="item no-outline"
           type="text"
           readonly
-          :value="item"
+          :value="item.body"
           ref="item"
           @dblclick="modifyItem(index)"
           @keyup.enter="modifyItem(index)"
