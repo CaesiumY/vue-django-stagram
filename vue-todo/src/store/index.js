@@ -1,6 +1,7 @@
 import Vue from "vue";
 import Vuex from "vuex";
 import axios from "axios";
+/* eslint-disable no-console */
 
 Vue.use(Vuex);
 
