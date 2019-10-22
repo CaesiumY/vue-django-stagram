@@ -5,6 +5,8 @@ import axios from "axios";
 
 Vue.use(Vuex);
 
+const API = "http://127.0.0.1:8000/api/todos";
+
 export default new Vuex.Store({
     state: {
         list: [],
@@ -21,7 +23,7 @@ export default new Vuex.Store({
         asyncSetList({ commit }) {
             // let lsList = JSON.parse(localStorage.getItem("todoList") || "[]");
             let lsList = axios
-                .get("http://127.0.0.1:8000/api/todos")
+                .get(API)
                 .then(response => {
                     console.log(response);
                     commit("setList", response.data);
