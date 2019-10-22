@@ -21,5 +21,5 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('todos/', TodoView.as_view()),
     path('api/todos/', TodoListView.as_view()),
-    path('api/todos/<int:todo_id>', TodoDetailView.as_view())
+    path('api/todos/<int:todo_id>/', TodoDetailView.as_view())
 ]

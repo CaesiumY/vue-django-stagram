@@ -25,12 +25,6 @@ export default {
   },
   created() {
     this.$store.dispatch("asyncSetList");
-  },
-  mounted() {
-    this.$store.watch(
-      () => this.$store.getters.getList,
-      todos => localStorage.setItem(STORAGE_KEY, JSON.stringify(todos))
-    );
   }
 };
 </script>

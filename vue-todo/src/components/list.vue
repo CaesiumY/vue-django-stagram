@@ -27,7 +27,7 @@
           </button>
           <div class="dropdown-menu">
             <button class="dropdown-item" ref="modifyBtn" @click="modifyItem(index)">수정</button>
-            <button class="dropdown-item" @click="removeItem(index)">삭제</button>
+            <button class="dropdown-item" @click="removeItem(item.id)">삭제</button>
           </div>
         </div>
       </li>
@@ -50,7 +50,7 @@ export default {
   },
   methods: {
     removeItem(index) {
-      this.$store.commit("removeList", index);
+      this.$store.dispatch("asyncPopList", index);
     },
     modifyItem(index) {
       this.$store.commit("modifyList", {

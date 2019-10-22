@@ -5,7 +5,7 @@ import axios from "axios";
 
 Vue.use(Vuex);
 
-const API = "http://127.0.0.1:8000/api/todos";
+const API = "http://127.0.0.1:8000/api/";
 
 export default new Vuex.Store({
     state: {
@@ -22,8 +22,8 @@ export default new Vuex.Store({
     actions: {
         asyncSetList({ commit }) {
             // let lsList = JSON.parse(localStorage.getItem("todoList") || "[]");
-            let lsList = axios
-                .get(API)
+            axios
+                .get(API + "todos/")
                 .then(response => {
                     console.log(response);
                     commit("setList", response.data);
@@ -31,7 +31,24 @@ export default new Vuex.Store({
                 .catch(error => {
                     console.log(error);
                 });
-            commit("setList", lsList);
+        },
+        asyncPushList({ commit, dispatch }, payload) {
+            axios
+                .post(API + "todos/", payload)
+                .then(response => {
+                    console.log(response);
+                    dispatch("asyncSetList");
+                })
+                .catch(error => console.log(error));
+        },
+        asyncPopList({ commit, dispatch }, payload) {
+            axios
+                .delete(`${API}todos/${payload}/`)
+                .then(response => {
+                    console.log(response);
+                    dispatch("asyncSetList");
+                })
+                .catch(error => console.log(error));
         }
     },
     mutations: {
