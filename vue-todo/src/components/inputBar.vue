@@ -24,8 +24,6 @@ export default {
   methods: {
     addItem() {
       if (this.value) {
-        // this.$store.commit("pushList", this.value);
-        // this.value = "";
         let obj = { body: this.value };
         this.$store.dispatch("asyncPushList", obj);
         this.value = "";
