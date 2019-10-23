@@ -12,8 +12,8 @@
           readonly
           :value="item.body"
           ref="item"
-          @dblclick="modifyItem(index)"
-          @keyup.enter="modifyItem(index)"
+          @dblclick="modifyItem(item, index)"
+          @keyup.enter="modifyItem(item, index)"
         />
         <div class>
           <button
@@ -26,7 +26,7 @@
             <span class="caret"></span>
           </button>
           <div class="dropdown-menu">
-            <button class="dropdown-item" ref="modifyBtn" @click="modifyItem(index)">수정</button>
+            <button class="dropdown-item" ref="modifyBtn" @click="modifyItem(item, index)">수정</button>
             <button class="dropdown-item" @click="removeItem(item.id)">삭제</button>
           </div>
         </div>
@@ -41,6 +41,7 @@ export default {
     return {
       // item: this.$refs["item"][index],
       // modifyBtn: this.$refs["modifyBtn"][index]
+      itemValue: ""
     };
   },
   computed: {
@@ -52,8 +53,11 @@ export default {
     removeItem(index) {
       this.$store.dispatch("asyncPopList", index);
     },
-    modifyItem(index) {
-      this.$store.commit("modifyList", {
+    modifyItem(myItem, index) {
+      let obj = { body: myItem.body };
+      this.$store.dispatch("asyncPutList", {
+        myItem,
+        obj,
         index,
         item: this.$refs["item"][index],
         modifyBtn: this.$refs["modifyBtn"][index]
