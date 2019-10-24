@@ -14,7 +14,6 @@ import Header from "./components/header";
 import InputBar from "./components/inputBar";
 import List from "./components/list";
 
-const STORAGE_KEY = "todoList";
 
 export default {
   name: "app",
