@@ -3,7 +3,7 @@
 
 
 
-# 1. 인스타 클론 코딩
+# 1. [인스타 클론 코딩](https://github.com/CaesiumY/vue-django-stagram/blob/master/index.html)
 `html`, `css` 만으로 인스타를 클론 코딩해보자.
 
 ## 📸 스크린샷
@@ -12,7 +12,7 @@
 
 <br>
 
-# 2. Vue.js 와 django를 사용한 Todo List 만들기
+# 2. [Vue.js](https://github.com/CaesiumY/vue-django-stagram/tree/master/vue-todo) 와 [django](https://github.com/CaesiumY/vue-django-stagram/tree/master/todolist)를 사용한 Todo List 만들기
 
 프론트는 `Vue.js`, 백엔드는 `django Rest Framework(DRF)`를 사용하여 todo list 앱을 만들어보자.
 
