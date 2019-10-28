@@ -3,8 +3,8 @@
 
 
 
-# 1. [인스타 클론 코딩](https://github.com/CaesiumY/vue-django-stagram/blob/master/index.html)
-`html`, `css` 만으로 인스타를 클론 코딩해보자.
+# 1. [인스타 클론 코딩 with Vue](https://github.com/CaesiumY/vue-django-stagram/blob/master/index.html)
+`html`, `css`, `js`를 포함한 `Vue.js` 로 인스타를 클론 코딩해보자.
 
 ## 📸 스크린샷
 
